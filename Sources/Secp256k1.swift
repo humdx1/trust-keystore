@@ -5,7 +5,7 @@
 // file LICENSE at the root of the source code distribution tree.
 
 import Foundation
-import secp256k1_ios
+import secp256k1
 
 /// `Secp256k1` provides functions for the ECDSA curve used in Ethereum.
 ///

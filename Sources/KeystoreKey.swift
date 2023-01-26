@@ -6,7 +6,7 @@
 
 import CryptoSwift
 import Foundation
-import secp256k1_ios
+//import secp256k1
 import Security
 
 /// Key definition.
@@ -115,7 +115,7 @@ public struct KeystoreKey {
             throw DecryptError.unsupportedCipher
         }
 
-        return Data(bytes: decryptedPK)
+        return Data(decryptedPK)
     }
 
     private static func computeMAC(prefix: Data, key: Data) -> Data {

@@ -5,7 +5,7 @@
 // file LICENSE at the root of the source code distribution tree.
 
 import Foundation
-import TrezorCrypto
+import TrezorCryptoC
 
 public final class Mnemonic {
     /// Generates a menmoic string with the given strength in bits.
@@ -22,7 +22,7 @@ public final class Mnemonic {
     /// Generates a mnemonic from seed data.
     ///
     /// - Precondition: the length of `data` is a multiple of 4 between 16 and 32
-    /// - Parameter data: seed data for the mnemonic
+    /// - Parameter data: seed data for the mnemonicmnemonic_generate
     /// - Returns: mnemonic string
     public static func generate(from data: Data) -> String {
         precondition(data.count % 4 == 0 && data.count >= 16 && data.count <= 32)
